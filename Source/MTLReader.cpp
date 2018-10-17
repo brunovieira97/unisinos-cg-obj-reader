@@ -31,7 +31,7 @@ std::vector<Material*> MTLReader::Read(std::string filename) {
 
 		switch(typeToken) {
 			case NEW_MATERIAL: {
-				std::cout << "[MTL] New material found at line " + std::to_string(lineCount) + "." << std::endl;
+				//std::cout << "[MTL] New material found at line " + std::to_string(lineCount) + "." << std::endl;
 				
 				std::string materialName;
 				lineStream >> materialName;
@@ -46,7 +46,7 @@ std::vector<Material*> MTLReader::Read(std::string filename) {
 			}
 
 			case MAP_KD: {
-				std::cout << "[MTL] Map KD found at line " + std::to_string(lineCount) + "." << std::endl;
+				//std::cout << "[MTL] Map KD found at line " + std::to_string(lineCount) + "." << std::endl;
 				
 				std::string textureFilename;
 				lineStream >> textureFilename;
@@ -57,7 +57,7 @@ std::vector<Material*> MTLReader::Read(std::string filename) {
 			}
 
 			case KA: case KS: case KD: {
-				std::cout << "[MTL] KA found at line " + std::to_string(lineCount) + "." << std::endl;
+				//std::cout << "[MTL] KA found at line " + std::to_string(lineCount) + "." << std::endl;
 				
 				float red, green, blue;
 				lineStream >> red >> green >> blue;
@@ -73,7 +73,7 @@ std::vector<Material*> MTLReader::Read(std::string filename) {
 			}
 
 			case NS: {
-				std::cout << "[MTL] NS found at line " + std::to_string(lineCount) + "." << std::endl;
+				//std::cout << "[MTL] NS found at line " + std::to_string(lineCount) + "." << std::endl;
 				
 				float ns;
 				lineStream >> ns;

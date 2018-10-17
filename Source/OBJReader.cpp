@@ -30,7 +30,7 @@ Mesh* OBJReader::Read(std::string filename) {
 
 		switch(typeToken) {
 			case VERTEX: {
-				std::cout << "Vertex found at line " + std::to_string(lineCount) + "." << std::endl;
+				//std::cout << "Vertex found at line " + std::to_string(lineCount) + "." << std::endl;
 
 				float x, y, z;
 				lineStream >> x >> y >> z;
@@ -41,7 +41,7 @@ Mesh* OBJReader::Read(std::string filename) {
 			}
 
 			case VERTEX_NORMAL: {
-				std::cout << "Vertex normal found at line " + std::to_string(lineCount) + "." << std::endl;
+				//std::cout << "Vertex normal found at line " + std::to_string(lineCount) + "." << std::endl;
 
 				float x, y, z;
 				lineStream >> x >> y >> z;
@@ -52,7 +52,7 @@ Mesh* OBJReader::Read(std::string filename) {
 			}
 
 			case VERTEX_TEXTURE: {
-				std::cout << "Vertex texture found at line " + std::to_string(lineCount) + "." << std::endl;
+				//std::cout << "Vertex texture found at line " + std::to_string(lineCount) + "." << std::endl;
 
 				float x, y;
 				lineStream >> x >> y;
@@ -63,7 +63,7 @@ Mesh* OBJReader::Read(std::string filename) {
 			}
 
 			case FACE: {
-				std::cout << "Face found at line " + std::to_string(lineCount) + "." << std::endl;
+				//std::cout << "Face found at line " + std::to_string(lineCount) + "." << std::endl;
 
 				std::vector<int> vertices, normals, textures;
 
@@ -98,7 +98,7 @@ Mesh* OBJReader::Read(std::string filename) {
 			}
 
 			case GROUP: {
-				std::cout << "Group found at line " + std::to_string(lineCount) + "." << std::endl;
+				//std::cout << "Group found at line " + std::to_string(lineCount) + "." << std::endl;
 
 				std::string groupName;
 				lineStream >> groupName;
@@ -114,7 +114,7 @@ Mesh* OBJReader::Read(std::string filename) {
 			}
 
 			case MATERIAL_LIBRARY: {
-				std::cout << "Material library found at line " + std::to_string(lineCount) + "." << std::endl;
+				//std::cout << "Material library found at line " + std::to_string(lineCount) + "." << std::endl;
 
 				std::string materialLibraryFilename;
 				lineStream >> materialLibraryFilename;
@@ -125,7 +125,7 @@ Mesh* OBJReader::Read(std::string filename) {
 			}
 
 			case USE_MATERIAL: {
-				std::cout << "Material usage found at line " + std::to_string(lineCount) + "." << std::endl;
+				//std::cout << "Material usage found at line " + std::to_string(lineCount) + "." << std::endl;
 
 				std::string materialID;
 				lineStream >> materialID;
