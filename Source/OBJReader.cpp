@@ -35,6 +35,10 @@ Mesh* OBJReader::Read(std::string filename) {
 				float x, y, z;
 				lineStream >> x >> y >> z;
 
+				x *= 0.01;
+				y *= 0.01;
+				z *= 0.01;
+
 				this -> mesh -> AddVertex(x, y, z);
 
 				break;
